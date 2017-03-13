@@ -9,6 +9,11 @@ defmodule MongoPoc.UserController do
     Logger.info("created a new user #{inspect(result)}")
   end
 
+  def create(conn, %{"user" => params}) do
+    changeset = User.changeset(%User{}, params)
+    result    = "ol"
+  end
+
   def lookup(conn, %{"email" => email}) do
     cursor = Mongo.find(:mongo, "users", %{"email" => email}, limit: 1)
     list   = Enum.to_list(cursor)
@@ -19,5 +24,4 @@ defmodule MongoPoc.UserController do
       {:error, nil}
     end
   end
-
 end

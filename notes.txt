@@ -1,0 +1,3 @@
+Xandra.execute! conn, "CREATE keyspace events_api_test with REPLICATION = {'class': 'SimpleStrategy', 'replication_factor':1}"
+%Xandra.SchemaChange{effect: "CREATED", options: %{keyspace: "events_api_test"},
+ target: "KEYSPACE"}

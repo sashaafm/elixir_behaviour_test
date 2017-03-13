@@ -19,7 +19,7 @@ defmodule MongoPoc.Mixfile do
   def application do
     [mod: {MongoPoc, []},
      applications: [:phoenix, :phoenix_pubsub, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :mongodb, :poolboy]]
+                    :phoenix_ecto, :mongodb, :poolboy, :xandra]]
   end
 
   # Specifies which paths to compile per environment.
@@ -38,7 +38,7 @@ defmodule MongoPoc.Mixfile do
       {:poolboy, ">= 0.0.0"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:cassandra, "~> 1.0.0-beta.3"}
+      {:xandra, ">= 0.0.0"}
     ]
   end
 

@@ -17,6 +17,9 @@ config :mongo_poc, MongoPoc.Endpoint,
   pubsub: [name: MongoPoc.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+config :mongo_poc,
+  driver: MongoPoc.CassandraPersistence
+
 config :mongo_poc, :db, name: "my-mongo"
 
 # Configures Elixir's Logger
